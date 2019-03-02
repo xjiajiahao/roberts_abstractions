@@ -1,5 +1,6 @@
 #! /usr/bin/env sh
-INCLUDE=/home/matt/dev/c/roberts_abstractions/book_code/unix-xwindows
+INCLUDE=/Users/xiejh/github/roberts_abstractions/book_code/unix-xwindows
 CSLIB=$INCLUDE/cslib.a
+LIBRARY_PATH=/opt/X11/lib
 LIBRARIES="$CSLIB -lX11 -lm"
-clang -I$INCLUDE $* $LIBRARIES
+clang -I$INCLUDE $* -L$LIBRARY_PATH $LIBRARIES
